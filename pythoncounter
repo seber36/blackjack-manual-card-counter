@@ -1,0 +1,18 @@
+def card_counter():
+    count = 0
+    while True:
+        card = input("Enter card value (2-10, J, Q, K, A) or type 'quit' to exit: ").upper()
+        if card == 'QUIT':
+            break
+        elif card in ['2', '3', '4', '5', '6']:
+            count += 1
+        elif card in ['10', 'J', 'Q', 'K', 'A']:
+            count -= 1
+        else:
+            print("Invalid card value. Please enter a valid card value or 'quit' to exit.")
+            continue
+        print("Current count:", count)
+    print("Final count:", count)
+
+if __name__ == "__main__":
+    card_counter()
